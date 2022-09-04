@@ -12,8 +12,9 @@ public class DialogContent extends Parent{
         PageFactory.initElements(GWD.getDriver(), this);
     }
 
+    // ------------------------------
     // Ortak Butonlar
-
+    // ------------------------------
     @FindBy(id="mat-input-0")
     private WebElement username;
 
@@ -50,8 +51,16 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "//ms-edit-button//button")
     private WebElement editButton;
 
+    @FindBy(xpath = "(//div[contains(@class,'mat-form-field-infix ng-tns-c74')]//input)[1]")
+    private WebElement searchInput;
 
+    @FindBy(xpath = "//ms-search-button//button")
+    private WebElement searchButton;
+
+
+    // ------------------------------
     //TEC-23 Locatorları
+    // ------------------------------
     @FindBy(xpath = "//button[@matbadgeoverlap='false']")
     private WebElement addBankAccounts;
 
@@ -74,9 +83,9 @@ public class DialogContent extends Parent{
 
 
 
-
+// ------------------------------
     // TEC-16 Butonları
-
+// ------------------------------
     @FindBy(xpath = "//mat-select[@formcontrolname='attachmentStages']")
     private WebElement stageInput;
 
@@ -134,9 +143,9 @@ public class DialogContent extends Parent{
     @FindBy(id = "mat-option-24")
     private WebElement dateOptn;
 
-
+// ------------------------------
     // TEC-18 Butonları
-
+// ------------------------------
     @FindBy(xpath="//ms-text-field[@formcontrolname='code']//input")
     private WebElement codeInput;
 
@@ -196,7 +205,7 @@ public class DialogContent extends Parent{
             case "searchCode" : myElement = searchCode; break;
             case "codeInput" : myElement = codeInput; break;
             case "searchDocName" : myElement = searchDocName; break;
-
+            case "searchInput": myElement = searchInput; break;
 
 
         }
@@ -243,6 +252,7 @@ public class DialogContent extends Parent{
             case "searchRequired" : myElement = searchRequired; break;
             case "searchActive" : myElement = searchActive; break;
             case "searchUseCamera" : myElement = searchUseCamera; break;
+            case "searchButton": myElement = searchButton; break;
 
 
         }

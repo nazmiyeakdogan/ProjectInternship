@@ -29,12 +29,5 @@ Feature:  Bank Accounts Functionalty
 
     Scenario: Edit Bank Accounts
 
-      And Click on the element in the Left Nav
-        | setupOne     |
-        | parameters   |
-        | bankAccounts |
-
-      And Click on the element in Dialog Content
-        | addBankAccounts |
 
 

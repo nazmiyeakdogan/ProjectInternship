@@ -47,4 +47,15 @@ public class TEC_23_Steps {
     public void successMessageShouldBeDisplayed() {
         dc.findAndContainsText("successMessage", "success");
     }
+
+    @And("User delete item from Dialog Content")
+    public void userDeleteItemFromDialogContent(DataTable elements) {
+
+        List<String > listElement = elements.asList(String.class);
+        for (int i = 0; i < listElement.size(); i++) {
+
+            dc.SearchAndDelete(listElement.get(i));
+
+        }
+    }
 }

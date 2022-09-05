@@ -61,8 +61,8 @@ public class DialogContent extends Parent{
     // ------------------------------
     //TEC-23 Locatorları
     // ------------------------------
-    @FindBy(xpath = "//button[@matbadgeoverlap='false']")
-    private WebElement addBankAccounts;
+
+//ms-text-field[contains(@placeholder,'FIELD.NAME')]
 
     @FindBy(xpath="//ms-text-field[@formcontrolname='name']//input")
     private WebElement bankAccountsName;
@@ -149,8 +149,6 @@ public class DialogContent extends Parent{
     @FindBy(xpath="//ms-text-field[@formcontrolname='code']//input")
     private WebElement codeInput;
 
-
-
     @FindBy(id = "ms-text-field-6")
     private WebElement searchDocName;
 
@@ -220,7 +218,6 @@ public class DialogContent extends Parent{
             case "loginButton" : myElement =loginButton; break;
             case "acceptCookies" : myElement =acceptCookies; break;
             case "addButton" : myElement = addButton; break;
-            case "addBankAccounts" : myElement = addBankAccounts;break;
             case "currencyEUR" : myElement = currencyEUR;break;
             case "saveButton" : myElement = saveButton;break;
             case "currency" : myElement = currency;break;

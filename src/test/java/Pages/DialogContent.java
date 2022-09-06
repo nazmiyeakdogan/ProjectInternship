@@ -33,7 +33,7 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "//div[contains(text(),'successfully')]")
     private WebElement successMessage;
 
-    @FindBy(xpath="//ms-add-button[contains(@tooltip,'GENERAL.BUTTON.ADD')]//button")
+    @FindBy(xpath="//ms-add-button[contains(@tooltip,'TITLE.ADD')]//button")
     private WebElement addButton;
 
     @FindBy(xpath="//ms-text-field[@formcontrolname='name']//input")
@@ -86,6 +86,10 @@ public class DialogContent extends Parent{
 // ------------------------------
     // TEC-16 Butonları
 // ------------------------------
+
+    @FindBy(xpath="//ms-add-button[contains(@tooltip,'GENERAL.BUTTON.ADD')]//button")
+    private WebElement addButtonField;
+
     @FindBy(xpath = "//mat-select[@formcontrolname='attachmentStages']")
     private WebElement stageInput;
 

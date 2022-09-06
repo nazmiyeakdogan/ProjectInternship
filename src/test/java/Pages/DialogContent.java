@@ -86,13 +86,17 @@ public class DialogContent extends Parent{
 // ------------------------------
     // TEC-16 Butonları
 // ------------------------------
+
+    @FindBy(xpath="//ms-add-button[contains(@tooltip,'GENERAL.BUTTON.ADD')]//button")
+    private WebElement addButtonField;
+
     @FindBy(xpath = "//mat-select[@formcontrolname='attachmentStages']")
     private WebElement stageInput;
 
     @FindBy(xpath = "//span[contains(text(),'Student Registration')]")
     private WebElement studentReg;
 
-    @FindBy(xpath = "")
+    @FindBy(xpath = "//span[contains(text(),'Examination') and @class='mat-option-text']")
     private WebElement examination;
 
     @FindBy(xpath = "//span[contains(text(),'Employment')]")
@@ -101,12 +105,11 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "//span[contains(text(),'Certificate')]")
     private WebElement certificate;
 
-    @FindBy(id = "")
+    @FindBy(id = "//span[contains(text(),'Contract') and @class='mat-option-text']")
     private WebElement contract;
 
-    @FindBy(id = "")
+    @FindBy(id = "//span[contains(text(),'Dismissal') and @class='mat-option-text']")
     private WebElement dismissal;
-
 
     @FindBy(xpath = "//textarea[@formcontrolname='description']")
     private WebElement descriptionInput;
@@ -120,28 +123,15 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "//mat-slide-toggle[@formcontrolname='useCamera']")
     private WebElement useCamera;
 
-
-
-    @FindBy(id = "ms-text-field-0")
+    @FindBy(xpath= "//ms-text-field[@placeholder='GENERAL.FIELD.NAME']//input")
     private WebElement searchName;
 
-    @FindBy(id = "ms-text-field-1")
-    private WebElement searchCode;
+    @FindBy(xpath = "//span[contains(text(),'Stage')]//ancestor::label")
+    private WebElement searchDocStage;
 
-    @FindBy(id="mat-select-value-9")
-    private WebElement fieldType;
+    @FindBy(xpath = "//span[contains(text(),'All')]")
+    private WebElement all;
 
-    @FindBy(id = "mat-option-21")
-    private WebElement txtOptn;
-
-    @FindBy(id = "mat-option-22")
-    private WebElement intOptn;
-
-    @FindBy(id = "mat-option-23")
-    private WebElement LoVOptn;
-
-    @FindBy(id = "mat-option-24")
-    private WebElement dateOptn;
 
 // ------------------------------
     // TEC-18 Butonları
@@ -149,41 +139,23 @@ public class DialogContent extends Parent{
     @FindBy(xpath="//ms-text-field[@formcontrolname='code']//input")
     private WebElement codeInput;
 
-    @FindBy(id = "ms-text-field-6")
-    private WebElement searchDocName;
+    @FindBy(xpath="//span[contains(text(),'Field Type')]")
+    private WebElement fieldType;
 
-    @FindBy(id = "mat-select-12")
-    private WebElement searchDocStage;
+    @FindBy(xpath = "//span[contains(text(),'Number')]")
+    private WebElement numOpt;
 
-    @FindBy(id = "mat-option-36")
-    private WebElement all;
+    @FindBy(xpath = "//span[contains(text(),'Text')]//parent::mat-option")
+    private WebElement txtOptn;
 
-    @FindBy(id = "mat-option-37")
-    private WebElement searchStudentReg;
+    @FindBy(xpath = "//span[contains(text(),'Integer')]")
+    private WebElement intOptn;
 
-    @FindBy(id = "mat-option-38")
-    private WebElement searchExamination;
+    @FindBy(xpath = "m//span[contains(text(),'List of Value')]")
+    private WebElement LoVOptn;
 
-    @FindBy(id = "mat-option-39")
-    private WebElement searchEmployment;
-
-    @FindBy(id = "mat-option-40")
-    private WebElement searchCertificate;
-
-    @FindBy(id = "mat-option-41")
-    private WebElement searchContract;
-
-    @FindBy(id = "mat-option-42")
-    private WebElement searchDismissal;
-
-    @FindBy(id = "mat-slide-toggle-61-input")
-    private WebElement searchRequired;
-
-    @FindBy(id = "mat-slide-toggle-62-input")
-    private WebElement searchActive;
-
-    @FindBy(id = "mat-slide-toggle-63")
-    private WebElement searchUseCamera;
+    @FindBy(id = "//span[contains(text(),'Date')]")
+    private WebElement dateOptn;
 
     //---------------------------------
 
@@ -200,11 +172,7 @@ public class DialogContent extends Parent{
             case "IntegrationCode" : myElement = IntegrationCode;break;
             case "descriptionInput" : myElement = descriptionInput; break;
             case "searchName" : myElement = searchName; break;
-            case "searchCode" : myElement = searchCode; break;
             case "codeInput" : myElement = codeInput; break;
-            case "searchDocName" : myElement = searchDocName; break;
-            case "searchInput": myElement = searchInput; break;
-
 
         }
 
@@ -224,7 +192,9 @@ public class DialogContent extends Parent{
             case "deleteButton" : myElement = deleteButton; break;
             case "deleteDialogBtn" : myElement = deleteDialogBtn; break;
             case "editButton" : myElement = editButton; break;
+
             case "stageInput" : myElement = stageInput; break;
+            case "searchDocStage" : myElement = searchDocStage; break;
             case "studentReg" : myElement = studentReg; break;
             case "examination" : myElement = examination; break;
             case "employment" : myElement = employment; break;
@@ -234,22 +204,13 @@ public class DialogContent extends Parent{
             case "required" : myElement = required; break;
             case "active" : myElement = active; break;
             case "useCamera" : myElement = useCamera; break;
+            case "all" : myElement = all; break;
             case "fieldType" : myElement = fieldType; break;
+            case "numOpt" : myElement = numOpt; break;
             case "txtOptn" : myElement = txtOptn; break;
             case "intOptn" : myElement = intOptn; break;
             case "LoVOptn" : myElement = LoVOptn; break;
             case "dateOptn" : myElement = dateOptn; break;
-            case "all" : myElement = all; break;
-            case "searchStudentReg" : myElement = searchStudentReg; break;
-            case "searchExamination" : myElement = searchExamination; break;
-            case "searchEmployment" : myElement = searchEmployment; break;
-            case "searchCertificate" : myElement = searchCertificate; break;
-            case "searchContract" : myElement = searchContract; break;
-            case "searchDismissal" : myElement = searchDismissal; break;
-            case "searchRequired" : myElement = searchRequired; break;
-            case "searchActive" : myElement = searchActive; break;
-            case "searchUseCamera" : myElement = searchUseCamera; break;
-            case "searchButton": myElement = searchButton; break;
 
 
         }

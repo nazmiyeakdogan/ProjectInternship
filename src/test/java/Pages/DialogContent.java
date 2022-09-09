@@ -172,7 +172,6 @@ public class DialogContent extends Parent{
 
     @FindBy(id = "//span[contains(text(),'Date')]")
     private WebElement dateOptn;
-
     //---------------------------------
     // TEC_22 Elements
     //---------------------------------

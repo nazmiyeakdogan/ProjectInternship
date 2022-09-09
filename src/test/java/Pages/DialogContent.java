@@ -174,6 +174,15 @@ public class DialogContent extends Parent{
     private WebElement dateOptn;
 
     //---------------------------------
+    // TEC_22 Elements
+    //---------------------------------
+
+    @FindBy(xpath = "(//td[text()='1MathUpdated']/..//td)[5]//div//ms-delete-button//button")
+    private WebElement mathUpdatedDeleteButton;
+
+    @FindBy(xpath = "(//td[text()='1Math']/..//td)[5]//ms-edit-button//button")
+    private WebElement mathEditButton;
+    //---------------------------------
 
     WebElement myElement;
     public void findAndSend(String strElement, String value){
@@ -232,7 +241,8 @@ public class DialogContent extends Parent{
             case "delete" : myElement = delete; break;
             case "editButtonOption" : myElement = editButtonOption; break;
             case "deleteButtonOption" : myElement = deleteButtonOption; break;
-
+            case "mathUpdatedDeleteButton" : myElement = mathUpdatedDeleteButton; break;
+            case "mathEditButton" : myElement = mathEditButton; break;
 
         }
 
@@ -261,6 +271,9 @@ public class DialogContent extends Parent{
         findAndClick("deleteDialogBtn");// dilogdaki silme butonuna bas
 
     }
+
+
+
 
 
 

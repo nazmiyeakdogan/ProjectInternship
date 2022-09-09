@@ -8,4 +8,9 @@ import java.util.List;
 
 public class TEC_18_Steps {
 
+    DialogContent dc=new DialogContent();
+    @And("Sending the keys in Dilaog1 Content")
+    public void SendingthekeysinDilaogContent(DataTable elements) {
+            dc.findAndSend("searchName","Hasan Ebrar");
+    }
 }

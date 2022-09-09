@@ -51,18 +51,31 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "//ms-edit-button//button")
     private WebElement editButton;
 
-    @FindBy(xpath = "(//div[contains(@class,'mat-form-field-infix ng-tns-c74')]//input)[1]")
+    @FindBy(xpath = "//div[contains(@class,'mat-form-field-infix ng-tns-c74')]//input")
     private WebElement searchInput;
 
     @FindBy(xpath = "//ms-search-button//button")
     private WebElement searchButton;
+
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='shortName']//input")
+    private WebElement shortName;
+
 
 
     // ------------------------------
     //TEC-23 Locatorları
     // ------------------------------
 
-//ms-text-field[contains(@placeholder,'FIELD.NAME')]
+
+
+    @FindBy(xpath = "//span[text()=' Delete ']")
+    private WebElement delete;
+
+    @FindBy(xpath = "//td[text()='Efecan']/../td[7]/div/ms-edit-button/button")
+    private WebElement editButtonOption;
+
+    @FindBy(xpath = "//td[text()='Efe Han']/../td[7]/div/ms-delete-button/button")
+    private WebElement deleteButtonOption;
 
     @FindBy(xpath="//ms-text-field[@formcontrolname='name']//input")
     private WebElement bankAccountsName;
@@ -78,6 +91,9 @@ public class DialogContent extends Parent{
 
     @FindBy(xpath = "//ms-text-field[@formcontrolname='integrationCode']//input")
     private WebElement IntegrationCode;
+
+    @FindBy(xpath = "//ms-text-field[contains(@placeholder, 'FIELD.ORDER')]//input")
+    private WebElement order;
 
     //-------------------------------------
 
@@ -173,7 +189,9 @@ public class DialogContent extends Parent{
             case "descriptionInput" : myElement = descriptionInput; break;
             case "searchName" : myElement = searchName; break;
             case "codeInput" : myElement = codeInput; break;
-
+            case "searchInput" : myElement = searchInput; break;
+            case "order" : myElement = order; break;
+            case "shortName" : myElement = shortName; break;
         }
 
         sendKeysFunction(myElement, value);
@@ -192,7 +210,7 @@ public class DialogContent extends Parent{
             case "deleteButton" : myElement = deleteButton; break;
             case "deleteDialogBtn" : myElement = deleteDialogBtn; break;
             case "editButton" : myElement = editButton; break;
-
+            case "searchButton" : myElement = searchButton; break;
             case "stageInput" : myElement = stageInput; break;
             case "searchDocStage" : myElement = searchDocStage; break;
             case "studentReg" : myElement = studentReg; break;
@@ -211,6 +229,9 @@ public class DialogContent extends Parent{
             case "intOptn" : myElement = intOptn; break;
             case "LoVOptn" : myElement = LoVOptn; break;
             case "dateOptn" : myElement = dateOptn; break;
+            case "delete" : myElement = delete; break;
+            case "editButtonOption" : myElement = editButtonOption; break;
+            case "deleteButtonOption" : myElement = deleteButtonOption; break;
 
 
         }
@@ -238,7 +259,6 @@ public class DialogContent extends Parent{
 
         findAndClick("deleteButton");// silme butonua bas
         findAndClick("deleteDialogBtn");// dilogdaki silme butonuna bas
-
 
     }
 

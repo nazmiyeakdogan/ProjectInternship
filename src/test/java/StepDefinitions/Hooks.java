@@ -17,7 +17,7 @@ public class Hooks {
     @After
     public void after(){
 
-        System.out.println("Senaryo bitt");
+        System.out.println("Senaryo bitti");
 
         GWD.quitDriver();
     }

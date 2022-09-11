@@ -4,6 +4,7 @@ import Utils.GWD;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 
 public class DialogContent extends Parent{
@@ -173,7 +174,8 @@ public class DialogContent extends Parent{
     @FindBy(id = "//span[contains(text(),'Date')]")
     private WebElement dateOptn;
     //---------------------------------
-    // TEC_22 Elements
+
+    // TEC 21-22 Elements
     //---------------------------------
 
     @FindBy(xpath = "(//td[text()='1MathUpdated']/..//td)[5]//div//ms-delete-button//button")
@@ -181,7 +183,18 @@ public class DialogContent extends Parent{
 
     @FindBy(xpath = "(//td[text()='1Math']/..//td)[5]//ms-edit-button//button")
     private WebElement mathEditButton;
+
+    @FindBy(xpath = "//ms-integer-field[contains(@placeholder,'.CAPACITY')]//input")
+    private WebElement schoolLocationCapacity;
+
+    @FindBy(xpath = "(//td[text()='MuzRepublic']/..//td)[7]//ms-edit-button//button")
+    private WebElement muzRepublicEditButton;
+
+    @FindBy(xpath = "(//td[text()='BananaRepublic']/..//td)[7]//ms-delete-button//button")
+    private WebElement bananaRepublicDeleteButton;
+
     //---------------------------------
+
 
     WebElement myElement;
     public void findAndSend(String strElement, String value){
@@ -200,6 +213,7 @@ public class DialogContent extends Parent{
             case "searchInput" : myElement = searchInput; break;
             case "order" : myElement = order; break;
             case "shortName" : myElement = shortName; break;
+            case "schoolLocationCapacity" : myElement = schoolLocationCapacity; break;
         }
 
         sendKeysFunction(myElement, value);
@@ -242,6 +256,8 @@ public class DialogContent extends Parent{
             case "deleteButtonOption" : myElement = deleteButtonOption; break;
             case "mathUpdatedDeleteButton" : myElement = mathUpdatedDeleteButton; break;
             case "mathEditButton" : myElement = mathEditButton; break;
+            case "muzRepublicEditButton" : myElement = muzRepublicEditButton; break;
+            case "bananaRepublicDeleteButton" : myElement = bananaRepublicDeleteButton; break;
 
         }
 
@@ -276,4 +292,7 @@ public class DialogContent extends Parent{
 
 
 
-}
+
+
+
+    }

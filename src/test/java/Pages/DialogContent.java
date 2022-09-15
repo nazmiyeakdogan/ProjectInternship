@@ -193,6 +193,38 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "(//td[text()='BananaRepublic']/..//td)[7]//ms-delete-button//button")
     private WebElement bananaRepublicDeleteButton;
 
+    // TEC 25-26 Elements
+    //---------------------------------
+
+    @FindBy(xpath = "(//ms-text-field[contains(@placeholder,'DESCRIPTION')])[1]//input")
+    private WebElement description;
+
+    @FindBy(xpath = "//ms-text-field[contains(@placeholder,'CODE')]//input")
+    private WebElement code;
+
+    @FindBy(xpath = "//span[contains(text(),'Search')]")
+    private WebElement descriptionSearchInput;
+
+    @FindBy(xpath= "//ms-integer-field[contains(@placeholder,'PRIORITY')]//input")
+    private WebElement priority;
+
+    @FindBy(xpath= "(//ms-text-field[contains(@placeholder,'DESCRIPTION')])[2]//input")
+    private WebElement nameInputdiscount;
+
+    @FindBy(xpath= "(//input[@type='text'])[4]")
+    private WebElement codeEdit;
+
+    @FindBy(xpath= "//ms-text-field[contains(@placeholder,'NAME')]//input")
+    private WebElement nameInputNationalities;
+
+
+  // @FindBy(xpath= "//ms-delete-button[@class='ng-star-inserted']//button")
+  // private WebElement discountsDelete;
+
+
+  // @FindBy(xpath= "//span[contains(text(),'Delete')]")
+  // private WebElement discountsDelete2;
+
     //---------------------------------
 
 
@@ -214,6 +246,14 @@ public class DialogContent extends Parent{
             case "order" : myElement = order; break;
             case "shortName" : myElement = shortName; break;
             case "schoolLocationCapacity" : myElement = schoolLocationCapacity; break;
+            case "description" : myElement = description; break;
+            case "code" : myElement = code; break;
+            case "descriptionSearchInput" : myElement = descriptionSearchInput; break;
+            case "priority" : myElement = priority; break;
+            case "nameInputdiscount" : myElement = nameInputdiscount; break;
+            case "codeEdit" : myElement = codeEdit; break;
+            case "nameInputNationalities" : myElement = nameInputNationalities; break;
+
         }
 
         sendKeysFunction(myElement, value);

@@ -1,23 +1,21 @@
-Feature:   Discounts Functionalty
+Feature:   Nationalities Functionalty
 
   Background:
     Given Navigate to basqar
     When Enter username and password and click login button
     Then User should login successfully
 
-  Scenario:  User Discounts
+  Scenario:  User Nationalities
     And Click on the element in the Left Nav
       | setupOne   |
       | parameters |
-      | discounts  |
+      | nationalities  |
 
     And Click on the element in Dialog Content
       | addButton |
 
     And Sending the keys in Dilaog Content
-      | nameInputdiscount | grup18Pelin |
-      | codeEdit          | 0034        |
-      | priority          | 02          |
+      |nameInput | grup18Pelin |
 
 
     And Click on the element in Dialog Content
@@ -26,21 +24,21 @@ Feature:   Discounts Functionalty
     And Success message should be displayed
 
 
-  Scenario: User Edit Discounts
 
 
+  Scenario: User Edit Nationalities
 
 
     And Click on the element in the Left Nav
       | setupOne   |
       | parameters |
-      | discounts  |
+      | nationalities  |
 
 
 
 
     And Sending the keys in Dilaog Content
-      | description | grup18Pelin |
+      | nameInputNationalities | grup18Pelin |
 
 
 
@@ -51,7 +49,7 @@ Feature:   Discounts Functionalty
       | editButton |
 
     And Sending the keys in Dilaog Content
-      | nameInputdiscount | grup18PelinCimen |
+      | nameInput | grup18PelinCimen |
 
 
     And Click on the element in Dialog Content
@@ -60,11 +58,11 @@ Feature:   Discounts Functionalty
     And Success message should be displayed
 
 
-  Scenario:  User delete  Discounts
+  Scenario:  User delete  Nationalities
     And Click on the element in the Left Nav
       | setupOne   |
       | parameters |
-      | discounts  |
+      | nationalities  |
 
 
     And User delete item from Dialog Content

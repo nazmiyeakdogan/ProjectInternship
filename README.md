@@ -6,4 +6,4 @@
 
 📌 Tool olarak Cucumber ile çalışıldı ve BDD' ye uygun olarak senaryolar Gherkin Language ile yazıldı.
 
-📌 Projede yer her bir kişi aplikasyonda edit, update ve delete işlemlerini gerçekleştirdi.
+📌 Projede yer alan her bir kişi aplikasyonda edit, update ve delete işlemlerini gerçekleştirdi.
